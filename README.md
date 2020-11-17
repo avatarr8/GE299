@@ -14,3 +14,13 @@ _note: All of this software is free and/or open source, as well as platform inde
 * [QGIS](https://qgis.org/en/site/)
 * [Open Office](https://www.openoffice.org/)
 * [NotePad++](https://notepad-plus-plus.org/downloads/) *note:**windows only** alternative to Atom*
+
+## Useful Links for Leaflet Development
+
+* [CSS Reference](https://www.w3schools.com/css/) W3 Schools has lots of great tutorials & references
+* [Hex Color Picker](https://htmlcolorcodes.com/color-picker/) this is just one example
+* [Leaflet Tutorials](https://leafletjs.com/examples.html)
+* [Leaflt Basemap Provider](http://leaflet-extras.github.io/leaflet-providers/preview/)
+
+
+We are using a greatly compressed piece of the brilliant University of Wisconsin Carto Lab workbook on web-mapping. If you would like to read more and/or work through more of the labs, the entire workbook and instructions are available [here](https://github.com/uwcartlab/webmapping).
