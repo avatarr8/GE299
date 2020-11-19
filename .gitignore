@@ -1,5 +1,8 @@
 ### macOS ###
 .DS_Store
+.VolumeIcon.icns
+.fseventsd
+Icon^M^M
 
 ### PrePos - this should be set locally ###
 prepros.config
