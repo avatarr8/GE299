@@ -5,8 +5,8 @@ function createMap(){
 
     //create the map
     map = L.map('mapid', {
-        center: [0, 0],
-        zoom: 1
+        center: [42.2627, 71.8019],
+        zoom: 4
     });
 
     //add  base tilelayer

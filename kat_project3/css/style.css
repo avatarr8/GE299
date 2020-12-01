@@ -1,7 +1,7 @@
 /* Stylesheet by Alex Tarr, 2020 */
 
 /********** LEAFLET CSS ***************/
-#mapid { height: 180px;}
+#mapid { height: 650px;}
 
 /********* HTML document CSS *********/
 body {
@@ -9,10 +9,24 @@ body {
 }
 
 h1 {
-  color: white;
+  color: '#ff33be';
   text-align: center;
 }
 
+h2 {
+  color: '#ff33bc';
+  text-align: center;
+}
+
+h3 {
+  color: '#33ff61';
+  text-align: center;
+}
+
+h4 {
+  color: '#fff933';
+  text-align: center;
+}
 p {
   font-family: verdana;
   font-size: 20px;

@@ -5,13 +5,13 @@ function createMap(){
 
     //create the map
     map = L.map('mapid', {
-        center: [0, 0],
-        zoom: 1
+        center: [42.26341, -71.80219],
+        zoom: 13
     });
 
     //add  base tilelayer
 		var myBasemap =  L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-				maxZoom: 17,
+				maxZoom: 13,
 				attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
 				});
 
@@ -25,9 +25,9 @@ function createMap(){
 function getData(map){
 
 		var myStyle = {
-    "color": "#ff7800",
-    "weight": 1,
-    "opacity": 0.65
+    "color": 'white',
+    "weight": 2,
+    "opacity": 1
 		};
 
   //load the data, then map
