@@ -1,10 +1,10 @@
 var map;
 
 function getColor(p) {
-		return p > .5 ? '#800026' :  //greater than 50%
-				   p > .4  ? '#BD0026' : //greater than 40%
-				   p > .3  ? '#E31A1C' : //greater than 30%
-				   p > .2  ? '#FC4E2A' : //greater than 20%
+		return p > .5 ? '#D5F5E3' :  //greater than 50%
+				   p > .4  ? '#82E0AA' : //greater than 40%
+				   p > .3  ? '#28B463' : //greater than 30%
+				   p > .2  ? '#1D8348' : //greater than 20%
 							         '#FFEDA0'; //fall back value
 }
 
