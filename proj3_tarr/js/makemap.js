@@ -13,16 +13,16 @@ function createMap(){
 
     //create the map
     map = L.map('mapid', {
-        center: [42.2626,-71.8023],
-        zoom: 10
+        center: [42.2754254,-71.8777784],
+        zoom: 12
     });
 
     //add  base tilelayer
 		var myBasemap = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.{ext}', {
 	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 	subdomains: 'abcd',
-	minZoom: 8,
-	maxZoom: 17,
+	minZoom: 9,
+	maxZoom: 14,
 	ext: 'png'
 });
 
