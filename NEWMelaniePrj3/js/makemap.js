@@ -13,14 +13,14 @@ function createMap(){
 
     //create the map
     map = L.map('mapid', {
-        center: [42.2768,-71.798889],
+        center: [42.2626,-71.8023],
         zoom: 12
     });
 
     //add  base tilelayer
-		var myBasemap =  L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
-	maxZoom: 20,
-	attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+		var myBasemap =  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+	maxZoom: 16
 });
 
 		myBasemap.addTo(map);
