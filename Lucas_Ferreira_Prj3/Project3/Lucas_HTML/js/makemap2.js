@@ -1,10 +1,11 @@
 var map;
 
 function getColor(p) {
-		return pa >= .5  ? '#03254c' :  //greater than 50%
-				   pa >= .4  ? '#1167b1' : //greater than 40%
-				   pa >= .3  ? '#2a9df4' : //greater than 30%
-				   pa >= .2  ? '#89cff0' : //greater than 20%
+		return p > .5  ? '#dd1c77' :  //greater than 50%
+				  // p >= .4  ? '#c51b8a' : //greater than 40%
+				   p > .3  ? '#f7f7f7' : //greater than 30%
+					// p >= .2  ? '#fbb4b9' : //greater than 20%
+				   p > .1  ? '#67a9cf' : //greater than 10%
 					 						'#FFFFFF'; //fall back value
 }
 
@@ -12,7 +13,7 @@ function getColor(p) {
 function createMap(){
 
     //create the map
-    map = L.map('mapid', {
+    map = L.map('mapid2', {
         center: [42.27,-71.8023],
         zoom:12
     });
@@ -33,7 +34,7 @@ function createMap(){
         legend.onAdd = function (map) {
 
             var div = L.DomUtil.create('div', 'info legend'),
-                grades = [20, 30, 40, 50],
+                grades = [10, 30, 50],
                 labels = [];
 
             // loop through our density intervals and generate a label with a colored square for each interval
@@ -63,7 +64,8 @@ function getData(map){
       dashArray: '5',
       fillOpacity: .5,
       //this equation uses the "getColor" function above to set the color based on the difference between votes divided by those cast
-     fillColor: getColor((feature.properties.biden-feature.properties.trump)/feature.properties.cast_total)
+     fillColor: getColor((feature.properties.registered-feature.properties.cast_total)/feature.properties.registered)
+
 // fillColor: getColor((feature.properties.trump-feature.properties.biden)/feature.properties.cast_total)
 		};
   }
