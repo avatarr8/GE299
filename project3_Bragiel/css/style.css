@@ -9,11 +9,11 @@ body {
 }
 
 h1 {
-  color: White;
-  text-align: Left;
+  color: white;
+  text-align: center;
 }
 
 p {
   font-family: verdana;
-  font-size: 250px;
+  font-size: 20px;
 }

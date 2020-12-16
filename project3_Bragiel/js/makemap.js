@@ -11,8 +11,8 @@ function createMap(){
 
     //add  base tilelayer
 		var myBasemap =  L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-				minZoom:12,
-				maxZoom: 22,
+       minZoom:12,
+        maxZoom: 22,
 				attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
 				});
 
@@ -26,13 +26,13 @@ function createMap(){
 function getData(map){
 
 		var myStyle = {
-    "color": "#ff0000",
-    "opacity": 0.75,
-    "color": "#000000",
-    "opacity": 0.75,
-    "color": "#0000FF",
-    "opacity": 0.75
-		};
+      "color": "#ff0000",
+      "opacity": 0.75,
+      "color": "#000000",
+      "opacity": 0.75,
+      "color": "#0000FF",
+      "opacity": 0.75
+    };
 
   //load the data, then map
     $.getJSON("data/City_Council_Districts_l.geojson", function(response){
