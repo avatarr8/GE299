@@ -1,10 +1,10 @@
 var map;
 
 function getColor(p) {
-		return p > .5 ? '#FFFFFF' :  //greater than 50%
-				   p > .4  ? '#BD0026' : //greater than 40%
-				   p > .3  ? '#E31A1C' : //greater than 30%
-				   p > .2  ? '#FC4E2A' : //greater than 20%
+		return p > .5 ? '#D5F5E3' :  //greater than 50%
+				   p > .4  ? '#82E0AA' : //greater than 40%
+				   p > .3  ? '#28B463' : //greater than 30%
+				   p > .2  ? '#1D8348' : //greater than 20%
 							         '#FFEDA0'; //fall back value
 }
 
@@ -13,17 +13,14 @@ function createMap(){
 
     //create the map
     map = L.map('mapid', {
-        center: [42.2754254,-71.8777784],
+        center: [42.2626,-71.8023],
         zoom: 12
     });
 
     //add  base tilelayer
-		var myBasemap = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.{ext}', {
-	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-	subdomains: 'abcd',
-	minZoom: 9,
-	maxZoom: 14,
-	ext: 'png'
+		var myBasemap =  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+	maxZoom: 16
 });
 
 		myBasemap.addTo(map);

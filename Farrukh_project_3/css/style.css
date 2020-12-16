@@ -1,14 +1,14 @@
 /* Stylesheet by Alex Tarr, 2020 */
 
 /********** LEAFLET CSS ***************/
-#mapid { height:850px;}
+#mapid { height:400px;}
 
 /* for the legend */
 .info {
     padding: 6px 8px;
     font: 14px/16px Arial, Helvetica, sans-serif;
     background: white;
-    background: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.6);
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     border-radius: 5px;
 }
@@ -18,11 +18,11 @@
 }
 
 .legend {
-    line-height: 18px;
+    line-height: 30px;
     color: #555;
 }
 .legend i {
-    width: 18px;
+    width: 600px;
     height: 18px;
     float: left;
     margin-right: 8px;

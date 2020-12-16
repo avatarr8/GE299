@@ -1,10 +1,10 @@
 var map;
 
 function getColor(p) {
-		return p > .5 ? '#FFFFFF' :  //greater than 50%
-				   p > .4  ? '#BD0026' : //greater than 40%
-				   p > .3  ? '#E31A1C' : //greater than 30%
-				   p > .2  ? '#FC4E2A' : //greater than 20%
+		return p > .5 ? '#118900' :  //greater than 50%
+				   p > .4  ? '#17A803' : //greater than 40%
+				   p > .3  ? '#20DA06' : //greater than 30%
+				   p > .2  ? '#78FF00' : //greater than 20%
 							         '#FFEDA0'; //fall back value
 }
 
@@ -13,18 +13,16 @@ function createMap(){
 
     //create the map
     map = L.map('mapid', {
-        center: [42.2754254,-71.8777784],
-        zoom: 12
+        center: [42.2626,-71.8023],
+        zoom: 11.5
     });
 
     //add  base tilelayer
-		var myBasemap = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.{ext}', {
-	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-	subdomains: 'abcd',
-	minZoom: 9,
-	maxZoom: 14,
-	ext: 'png'
-});
+		var myBasemap =  L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png',{
+				maxZoom: 17,
+        minZoom: 11.5,
+				attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+				});
 
 		myBasemap.addTo(map);
 
@@ -60,9 +58,9 @@ function getData(map){
 //because we are creating a choropleth map, we set the color with a function
   function myStyle(feature) {
     return {
-      weight: 2,
+      weight: 3,
       opacity: 1,
-      color: 'white',
+      color: 'Blue',
       dashArray: '3',
       fillOpacity: 0.7,
       //this equation uses the "getColor" function above to set the color based on the difference between votes divided by those cast

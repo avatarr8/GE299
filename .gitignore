@@ -3,7 +3,7 @@
 .VolumeIcon.icns
 .fseventsd
 Icon^M^M
-Icon[\r]
+Icon^M
 ### PrePos - this should be set locally ###
 prepros.config
 proj3_demo/prepros.config
