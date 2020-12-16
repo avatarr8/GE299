@@ -1,0 +1,19 @@
+/* Stylesheet by Alex Tarr, 2020 */
+
+/********** LEAFLET CSS ***************/
+#mapid { height: 1080px;}
+
+/********* HTML document CSS *********/
+body {
+  background-color: #d7e0de;
+}
+
+h1 {
+  color: White;
+  text-align: Left;
+}
+
+p {
+  font-family: verdana;
+  font-size: 250px;
+}
