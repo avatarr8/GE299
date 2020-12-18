@@ -7,7 +7,8 @@ var breaks = [
 		[.3, '#2a9df4'],
 		[.2, '#89cff0']
 ];
-
+var labels = breaks.map((x)=>x); //this makes a copy of the breaks array that can be easily reversed for the labels
+labels.reverse();
 
 function getColor(p) {
 	fcolor = '#FFFFFF'; //set the feature color to white by default
@@ -87,15 +88,15 @@ function createMap(){
 	    var legend = L.control({position: 'bottomright'});
 	        legend.onAdd = function (map) {
 
-	            var div = L.DomUtil.create('div', 'info legend'),
-	                grades = [20, 30, 40, 50],
-	                labels = [];
+	            var div = L.DomUtil.create('div', 'info legend');
 
 	            // loop through our density intervals and generate a label with a colored square for each interval
-	            for (var i = 0; i < grades.length; i++) {
+	            for (var i = 0; i < breaks.length; i++) {
 	                div.innerHTML +=
-	                    '<i style="background:' + getColor((grades[i]+1)/100) + '"></i> ' +
-	                    grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+	                   // '<i style="background:' + getColor((grades[i]+1)/100) + '"></i> ' +
+										 '<i style="background:' + labels[i][1] + '"></i>' +
+	                   //grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+										 labels[i][0]*100 + (labels[i + 1] ? '&ndash;' + labels[i + 1][0]*100 + '<br>' : '+');
 	            }
 
 	            return div;
