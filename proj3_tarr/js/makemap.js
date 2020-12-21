@@ -1,7 +1,7 @@
 var map;
 
 function getColor(p) {
-		return p > .5 ? '#FFFFFF' :  //greater than 50%
+		return p > .5 ? '#EE0026' :  //greater than 50%
 				   p > .4  ? '#BD0026' : //greater than 40%
 				   p > .3  ? '#E31A1C' : //greater than 30%
 				   p > .2  ? '#FC4E2A' : //greater than 20%
@@ -62,7 +62,7 @@ function getData(map){
     return {
       weight: 2,
       opacity: 1,
-      color: 'white',
+      color: 'black',
       dashArray: '3',
       fillOpacity: 0.7,
       //this equation uses the "getColor" function above to set the color based on the difference between votes divided by those cast
