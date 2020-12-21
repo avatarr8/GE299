@@ -1,11 +1,12 @@
 var map;
 var geodata = "data/worcElection20.geojson"
-var mapdivs = ["biden","trump"];
+var mapdivs = ["biden", "nonvoters", "trump"];
 var breaks = [
-		[.5, '#03254c'],
-		[.4, '#1167b1'],
-		[.3, '#2a9df4'],
-		[.2, '#89cff0']
+		[.5, '#54278f'],
+		[.4, '#756bb1'],
+		[.3, '#9e9ac8'],
+		[.2, '#cbc9e2'],
+		[.1, '#f2f0f7']
 ];
 var labels = breaks.map((x)=>x); //this makes a copy of the breaks array that can be easily reversed for the labels
 labels.reverse();
@@ -28,25 +29,29 @@ function myStyle(feature) {
 	//more math might be needed to get the output to fit in the breaks
 	//see for example Math.abs() here: https://www.w3schools.com/js/js_math.asp
 
+
 		switch (divcase) { //divcase is a variable set in the onEach function in the createMap function
 			case "biden":
 				result = (feature.properties.biden-feature.properties.trump)/feature.properties.cast_total
 				break;
 
-			case "trump":
-				result = (feature.properties.biden-feature.properties.trump)/feature.properties.cast_total
-				break;
+			case "nonvoters":
+					result = (feature.properties.registered-feature.properties.cast_total)/feature.properties.registered
+					break;
 
+			case "trump":
+						result = (feature.properties.trump)/feature.properties.cast_total
+						break;
 			default:
 				result = (feature.properties.biden-feature.properties.trump)/feature.properties.cast_total
 		}
 
     return {
       weight: 2,
-      opacity: 1,
+      opacity: 1.5,
       color: 'silver',
       dashArray: '5',
-      fillOpacity: .5,
+      fillOpacity: 1,
 		  fillColor: getColor(result)
 			};
   }//end of myStyle
